@@ -1,0 +1,89 @@
+{
+ "modelo": {
+  "metodo": "focal_g2_sin_alfa",
+  "capas": 2,
+  "pe": "si",
+  "mejor_fold": 1
+ },
+ "preprocesamiento": "articulo",
+ "ventanas": 354,
+ "semiflujos": 71481,
+ "accuracy": 0.5626670024202236,
+ "matriz_confusion": [
+  [
+   790,
+   0,
+   576,
+   458,
+   308
+  ],
+  [
+   139,
+   0,
+   918,
+   289,
+   72
+  ],
+  [
+   3547,
+   102,
+   37855,
+   13329,
+   6571
+  ],
+  [
+   185,
+   0,
+   2185,
+   586,
+   0
+  ],
+  [
+   177,
+   0,
+   978,
+   1427,
+   989
+  ]
+ ],
+ "clases": [
+  "Chat",
+  "Email",
+  "FileTransfer",
+  "Streaming",
+  "VoIP"
+ ],
+ "por_clase": {
+  "Chat": {
+   "semiflujos": 2132,
+   "accuracy": 0.3705440900562852,
+   "ventanas": 84,
+   "ventanas_ok": 30
+  },
+  "Email": {
+   "semiflujos": 1418,
+   "accuracy": 0.0,
+   "ventanas": 60,
+   "ventanas_ok": 0
+  },
+  "FileTransfer": {
+   "semiflujos": 61404,
+   "accuracy": 0.6164907823594554,
+   "ventanas": 60,
+   "ventanas_ok": 35
+  },
+  "Streaming": {
+   "semiflujos": 2956,
+   "accuracy": 0.19824086603518268,
+   "ventanas": 60,
+   "ventanas_ok": 0
+  },
+  "VoIP": {
+   "semiflujos": 3571,
+   "accuracy": 0.2769532343881266,
+   "ventanas": 90,
+   "ventanas_ok": 30
+  }
+ },
+ "ms_por_semiflujo_mediana": 1.5089
+}

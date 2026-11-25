@@ -1,0 +1,6 @@
+modelo,accuracy,macro_f1,balanced_accuracy,kappa,mcc,recall_Chat,recall_Email,recall_FileTransfer,recall_Streaming,recall_VoIP,latencia_ms_por_semiflujo,params
+xgboost,0.993938,0.973433,0.966352,0.990863,0.990874,0.909774,0.941176,0.999142,0.985777,0.995891,0.068679,"{""n_estimators"": 500, ""max_depth"": 10, ""learning_rate"": 0.1}"
+xgboost_balanced,0.994068,0.973335,0.972408,0.991059,0.991073,0.93985,0.941176,0.999217,0.985488,0.996312,0.005802,"{""n_estimators"": 500, ""max_depth"": 10, ""learning_rate"": 0.1}"
+random_forest,0.99359,0.974021,0.967615,0.990339,0.990361,0.917293,0.941176,0.998993,0.983463,0.997152,0.00486,"{""n_estimators"": 300, ""max_depth"": null, ""min_samples_leaf"": 1}"
+random_forest_balanced,0.993518,0.960992,0.969068,0.990231,0.990255,0.924812,0.941176,0.998844,0.983029,0.997479,0.004595,"{""n_estimators"": 300, ""max_depth"": null, ""min_samples_leaf"": 1}"
+Transformer (artículo),0.932664,0.677644,0.71359,0.897716,0.90324,0.789474,0.0,0.997911,0.783087,0.997479,0.100283,

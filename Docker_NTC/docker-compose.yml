@@ -1,0 +1,42 @@
+## -----------------------------------------------------------------------------------------------------------------------------
+## -----------------------DOCKER-COMPOSE PARA EL PROYECTO DE CLASIFICACIÓN DE TRÁFICO DE RED------------------------------------
+## -------------------------------FECHA DE ACTUALIZACIÓN : JULIO DE 2023--------------------------------------------------------
+## Las opciones dentro de la categoría "cap_add" se han añadido para permitir al contenedor acceder a la red del host 
+## libremente, lo cual era obligatorio para la clasificación de tráfico en tiempo real.
+## Al añadir esta opción es necesario deshabilitar los puertos, ya que el contenedor se conecta directamente al host y usa sus
+## puertos, como si fuera una aplicación más del mismo. Por tanto, si tenemo un jupyter notebook en el contenedor, que está 
+## usando el puerto 8080, este estará directamente conectado al puerto 8080 del host, sin necesidad de hacer un mapeo.
+## -----------------------------------------------------------------------------------------------------------------------------
+
+## Versión de docker-compose
+version: "3.8"
+
+## Parámetros para el contenedor
+services:
+    tensorflow:
+        build: .
+        container_name: contenedor_carlos_jupyter       ## Nombre del contenedor
+        image: imagen_jupyter_carlos                    ## Nombre de la imagen que utilizará el contenedor 
+        hostname: docker_carlos                         ## Nombre de la máquina del contenedor
+        stdin_open: true
+        tty: true
+        network_mode: host
+        cap_add:
+            - NET_ADMIN
+            - NET_RAW
+        environment:
+            - TZ=Europe/Madrid
+        volumes:
+            - /home/carlos/AAA_Carlos/:/home/ceiec/app/:rw      ## Volúmen/es a conectar --> host:contenedor
+            ## Colocar aquí el resto de volúmenes que hagan falta. Ejemplo:
+            #- /home/carlos/prueba/:/home/ceiec/directorio_prueba:rw
+            #- /home/carlos/prueba2/:/home/ceiec/directorio_prueba_2:rw
+        #ports:
+            #- 9999:8090                                         ## Mapeo de puertos --> host:contenedor 
+        deploy:
+            resources:
+                reservations:
+                    devices:
+                        - driver: nvidia
+                          device_ids: ["0"]             ## GPUs a asignar al contenedor --> ["0"] ó ["0","1",“2“,etc]
+                          capabilities: [gpu]

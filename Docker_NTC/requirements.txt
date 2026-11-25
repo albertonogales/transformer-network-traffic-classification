@@ -1,0 +1,12 @@
+## ------------------------------------------------------------------------------------------------------------------------------
+## -----------------------REQUIREMENTS PARA EL PROYECTO DE CLASIFICACIÓN DE TRÁFICO DE RED---------------------------------------
+## --------------------------------FECHA DE ACTUALIZACIÓN : MAYO DE 2023---------------------------------------------------------
+## ------------------------------------------------------------------------------------------------------------------------------
+
+## Definimos los paquetes de Python necesarios para el proyecto, junton con su versión
+## Importante fijar la versión para evitar problemas de compatibilidades en el futuro!
+
+numpy == 1.24.3
+pandas == 2.0.1
+scikit-learn == 1.2.2
+matplotlib == 3.7.1

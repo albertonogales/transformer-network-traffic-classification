@@ -1,0 +1,21 @@
+
+
+1) Conectarse a la máquina:
+ssh -i franciscoVitoria.pem ubuntu@ec2-54-72-239-44.eu-west-1.compute.amazonaws.com
+
+2) Levantamos el contenedor:
+docker start contenedor_carlos_jupyter
+
+3) Nos conectamos al contenedor:
+docker exec -it contenedor_carlos_jupyter /bin/bash
+
+4) Dentro del contenedor encendemos el jupyter:
+jupyter notebook --ip 0.0.0.0 --no-browser --port 8090 --allow-root
+
+
+5) En una nueva terminal del host hacemos la conexión ssh de puertos:
+ssh -i franciscoVitoria.pem -L 8090:ec2-54-72-239-44.eu-west-1.compute.amazonaws.com:9999 ubuntu@ec2-54-72-239-44.eu-west-1.compute.amazonaws.com
+
+6) Ya podemos ver nuestro jupyter en localhost:8090
+
+

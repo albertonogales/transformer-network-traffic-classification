@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Large preprocessed data (5 GB each — regenerate with 00_preprocesar_y_reproducir.py)
+revision_IJIS/datos/X.npy
+revision_IJIS/datos_tshark469/X.npy
+
+# OS
+.DS_Store

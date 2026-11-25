@@ -1,0 +1,148 @@
+Campos TShark: ['_ws.col.No.', 'frame.time_relative', '_ws.col.Source', '_ws.col.Destination', '_ws.col.Protocol', 'tcp.srcport', 'tcp.dstport', 'tcp.len', 'udp.srcport', 'udp.dstport', 'tcp.payload', 'udp.payload']
+109 PCAP encontrados
+  Chat: 20 PCAP
+  Email: 4 PCAP
+  FileTransfer: 32 PCAP
+  Streaming: 30 PCAP
+  VoIP: 23 PCAP
+TShark + semi-flujos: 16.1 min
+  Chat          AIMchat1.pcapng              paquetes=      404 semiflujos=      0
+  Chat          AIMchat2.pcapng              paquetes=      366 semiflujos=      0
+  Chat          ICQchat1.pcapng              paquetes=      487 semiflujos=      0
+  Chat          ICQchat2.pcapng              paquetes=      280 semiflujos=      0
+  Chat          aim_chat_3a.pcap             paquetes=     1243 semiflujos=     25
+  Chat          aim_chat_3b.pcap             paquetes=     2856 semiflujos=      0
+  Chat          facebook_chat_4a.pcap        paquetes=     2192 semiflujos=     46
+  Chat          facebook_chat_4b.pcap        paquetes=     5527 semiflujos=     60
+  Chat          facebookchat1.pcapng         paquetes=     1061 semiflujos=     26
+  Chat          facebookchat2.pcapng         paquetes=      434 semiflujos=      2
+  Chat          facebookchat3.pcapng         paquetes=     1726 semiflujos=     32
+  Chat          gmailchat1.pcapng            paquetes=     1800 semiflujos=      7
+  Chat          gmailchat2.pcapng            paquetes=     3143 semiflujos=     16
+  Chat          gmailchat3.pcapng            paquetes=     7329 semiflujos=    153
+  Chat          hangout_chat_4b.pcap         paquetes=     7587 semiflujos=    140
+  Chat          hangouts_chat_4a.pcap        paquetes=     5675 semiflujos=    179
+  Chat          icq_chat_3a.pcap             paquetes=      755 semiflujos=      0
+  Chat          icq_chat_3b.pcap             paquetes=     2721 semiflujos=      0
+  Chat          skype_chat1a.pcap            paquetes=    53996 semiflujos=    498
+  Chat          skype_chat1b.pcap            paquetes=    53869 semiflujos=    516
+  Email         email1a.pcap                 paquetes=    30410 semiflujos=      6
+  Email         email1b.pcap                 paquetes=    32566 semiflujos=    112
+  Email         email2a.pcap                 paquetes=     4417 semiflujos=      6
+  Email         email2b.pcap                 paquetes=     7686 semiflujos=     44
+  FileTransfer  ftps_down_1a.pcap            paquetes=  5743493 semiflujos= 190704
+  FileTransfer  ftps_down_1b.pcap            paquetes=  1942866 semiflujos=   6916
+  FileTransfer  ftps_up_2a.pcap              paquetes=    93433 semiflujos=   3037
+  FileTransfer  ftps_up_2b.pcap              paquetes=    93191 semiflujos=   3063
+  FileTransfer  scp1.pcapng                  paquetes=   393360 semiflujos=   9871
+  FileTransfer  scpDown1.pcap                paquetes=     1931 semiflujos=     49
+  FileTransfer  scpDown2.pcap                paquetes=     3576 semiflujos=     92
+  FileTransfer  scpDown3.pcap                paquetes=    15390 semiflujos=    415
+  FileTransfer  scpDown4.pcap                paquetes=      166 semiflujos=      4
+  FileTransfer  scpDown5.pcap                paquetes=    85018 semiflujos=   2268
+  FileTransfer  scpDown6.pcap                paquetes=    82941 semiflujos=   2206
+  FileTransfer  scpUp1.pcap                  paquetes=    71326 semiflujos=   1609
+  FileTransfer  scpUp2.pcap                  paquetes=   130938 semiflujos=   1644
+  FileTransfer  scpUp3.pcap                  paquetes=      144 semiflujos=      3
+  FileTransfer  scpUp5.pcap                  paquetes=      198 semiflujos=      6
+  FileTransfer  scpUp6.pcap                  paquetes=    56508 semiflujos=    848
+  FileTransfer  sftp1.pcapng                 paquetes=   446947 semiflujos=   9331
+  FileTransfer  sftpDown1.pcap               paquetes=     1995 semiflujos=     50
+  FileTransfer  sftpDown2.pcap               paquetes=     4729 semiflujos=    130
+  FileTransfer  sftpUp1.pcap                 paquetes=    62966 semiflujos=   1449
+  FileTransfer  sftp_down_3a.pcap            paquetes=    95868 semiflujos=   3223
+  FileTransfer  sftp_down_3b.pcap            paquetes=    49526 semiflujos=      0
+  FileTransfer  sftp_up_2a.pcap              paquetes=   107234 semiflujos=      0
+  FileTransfer  sftp_up_2b.pcap              paquetes=    95785 semiflujos=   3214
+  FileTransfer  skype_file1.pcap             paquetes=      780 semiflujos=     21
+  FileTransfer  skype_file2.pcap             paquetes=     4607 semiflujos=    187
+  FileTransfer  skype_file3.pcap             paquetes=    65323 semiflujos=   3227
+  FileTransfer  skype_file4.pcapng           paquetes=      455 semiflujos=     10
+  FileTransfer  skype_file5.pcapng           paquetes=     1236 semiflujos=     30
+  FileTransfer  skype_file6.pcapng           paquetes=    66566 semiflujos=   3227
+  FileTransfer  skype_file7.pcapng           paquetes=   511268 semiflujos=  25246
+  FileTransfer  skype_file8.pcapng           paquetes=   777401 semiflujos=  25291
+  Streaming     netflix1.pcap                paquetes=    51932 semiflujos=   1342
+  Streaming     netflix2.pcap                paquetes=    51826 semiflujos=   1358
+  Streaming     netflix3.pcap                paquetes=   122380 semiflujos=   3285
+  Streaming     netflix4.pcap                paquetes=    73147 semiflujos=   1904
+  Streaming     spotify1.pcap                paquetes=    14442 semiflujos=    334
+  Streaming     spotify2.pcap                paquetes=      737 semiflujos=      6
+  Streaming     spotify3.pcap                paquetes=     3320 semiflujos=     72
+  Streaming     spotify4.pcap                paquetes=    22755 semiflujos=    575
+  Streaming     vimeo1.pcap                  paquetes=    92705 semiflujos=   2846
+  Streaming     vimeo2.pcap                  paquetes=     3038 semiflujos=     63
+  Streaming     vimeo3.pcap                  paquetes=    31903 semiflujos=   1061
+  Streaming     vimeo4.pcap                  paquetes=    18755 semiflujos=    541
+  Streaming     youtube1.pcap                paquetes=     7932 semiflujos=    173
+  Streaming     youtube2.pcap                paquetes=    12738 semiflujos=    335
+  Streaming     youtube3.pcap                paquetes=     7288 semiflujos=    182
+  Streaming     youtube4.pcap                paquetes=    39742 semiflujos=   1012
+  Streaming     youtube5.pcap                paquetes=   135087 semiflujos=   3746
+  Streaming     youtube6.pcap                paquetes=     7948 semiflujos=    205
+  Streaming     youtubeHTML5_1.pcap          paquetes=    41380 semiflujos=   1032
+  VoIP          facebook_audio1a.pcap        paquetes=    46061 semiflujos=   2105
+  VoIP          facebook_audio1b.pcapng      paquetes=    47677 semiflujos=   2103
+  VoIP          facebook_audio2a.pcap        paquetes=    91815 semiflujos=   4210
+  VoIP          facebook_audio2b.pcapng      paquetes=    94092 semiflujos=   4205
+  VoIP          facebook_audio3.pcapng       paquetes=   643049 semiflujos=  29928
+  VoIP          facebook_audio4.pcapng       paquetes=  1040037 semiflujos=  30148
+  Streaming     facebook_video1a.pcap        paquetes=   156989 semiflujos=   7647
+  Streaming     facebook_video1b.pcapng      paquetes=    92692 semiflujos=   4528
+  Streaming     facebook_video2a.pcap        paquetes=   244619 semiflujos=  11946
+  Streaming     facebook_video2b.pcapng      paquetes=   245777 semiflujos=  11942
+  VoIP          hangouts_audio1a.pcap        paquetes=    87334 semiflujos=   3815
+  VoIP          hangouts_audio1b.pcapng      paquetes=    82393 semiflujos=   3738
+  VoIP          hangouts_audio2a.pcap        paquetes=    85281 semiflujos=   3705
+  VoIP          hangouts_audio2b.pcapng      paquetes=    75008 semiflujos=   3390
+  VoIP          hangouts_audio3.pcapng       paquetes=   609720 semiflujos=  28500
+  VoIP          hangouts_audio4.pcapng       paquetes=  1019454 semiflujos=  29519
+  Streaming     hangouts_video1b.pcapng      paquetes=   439402 semiflujos=  21578
+  Streaming     hangouts_video2a.pcap        paquetes=   808344 semiflujos=  39563
+  Streaming     hangouts_video2b.pcapng      paquetes=   742988 semiflujos=  36637
+  VoIP          skype_audio1a.pcap           paquetes=    60207 semiflujos=   2955
+  VoIP          skype_audio1b.pcapng         paquetes=    65212 semiflujos=   3036
+  VoIP          skype_audio2a.pcap           paquetes=    58569 semiflujos=   2903
+  VoIP          skype_audio2b.pcapng         paquetes=    64184 semiflujos=   2988
+  VoIP          skype_audio3.pcapng          paquetes=   420634 semiflujos=  12479
+  VoIP          skype_audio4.pcapng          paquetes=   256641 semiflujos=  12626
+  Streaming     skype_video1a.pcap           paquetes=   140569 semiflujos=   6999
+  Streaming     skype_video1b.pcapng         paquetes=   255533 semiflujos=  11121
+  Streaming     skype_video2a.pcap           paquetes=   283356 semiflujos=  14113
+  Streaming     skype_video2b.pcapng         paquetes=   842212 semiflujos=  36621
+  VoIP          voipbuster1b.pcapng          paquetes=    35469 semiflujos=   1669
+  VoIP          voipbuster2b.pcapng          paquetes=    34667 semiflujos=   1659
+  VoIP          voipbuster3b.pcapng          paquetes=    34510 semiflujos=   1666
+  VoIP          voipbuster_4a.pcap           paquetes=   370043 semiflujos=  18409
+  VoIP          voipbuster_4b.pcap           paquetes=   369820 semiflujos=  17791
+Chat: 1700 semi-flujos, 375 repetidos, 1325 únicos
+Email: 168 semi-flujos, 0 repetidos, 168 únicos
+FileTransfer: 297371 semi-flujos, 29303 repetidos, 268068 únicos
+Streaming: 222767 semi-flujos, 15354 repetidos, 207413 únicos
+VoIP: 223547 semi-flujos, 9366 repetidos, 214181 únicos
+
+Recuentos obtenidos vs artículo:
+  Chat             1325  artículo    1325  OK
+  Email             168  artículo     168  OK
+  FileTransfer   268068  artículo  266577  DISTINTO
+  Streaming      207413  artículo  207405  DISTINTO
+  VoIP           214181  artículo  214180  DISTINTO
+
+AVISO: los recuentos no coinciden. Causas probables: etiquetado de videollamadas (probar --videollamadas VoIP), PCAP distintos a los de 2023 o versión de TShark distinta (cambia la columna Protocol). La partición ya no será la del artículo.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794306800.216990   27776 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1794306805.320896   27776 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Partición: desarrollo=622039 test=69116
+Test por clase: {'Chat': 133, 'Email': 17, 'FileTransfer': 26807, 'Streaming': 20741, 'VoIP': 21418}
+Parámetros entrenables: 149213
+WARNING:tensorflow:TensorFlow GPU support is not available on native Windows for TensorFlow >= 2.11. Even if CUDA/cuDNN are installed, GPU will not be used. Please use WSL2 or the TensorFlow-DirectML plugin.
+== Modelo del artículo (pesos guardados) ==
+accuracy=93.27%  macro-F1=67.76%  balanced-acc=71.36%  kappa=0.898  MCC=0.903
+  Chat          n=   133  P= 47.30  R= 78.95 [71.3-85.0]  F1= 59.15  Esp= 99.83
+  Email         n=    17  P=  0.00  R=  0.00 [0.0-18.4]  F1=  0.00  Esp=100.00
+  FileTransfer  n= 26807  P= 85.99  R= 99.79 [99.7-99.8]  F1= 92.38  Esp= 89.70
+  Streaming     n= 20741  P= 99.38  R= 78.31 [77.7-78.9]  F1= 87.59  Esp= 99.79
+  VoIP          n= 21418  P= 99.65  R= 99.75 [99.7-99.8]  F1= 99.70  Esp= 99.84
+
+REPRODUCCIÓN: NO coincide (93.27 %). Revisar recuentos, versión de TShark y etiquetado de videollamadas.

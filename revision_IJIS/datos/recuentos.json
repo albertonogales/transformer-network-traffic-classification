@@ -1,0 +1,32 @@
+{
+  "recuentos": {
+    "Chat": 1325,
+    "Email": 168,
+    "FileTransfer": 268068,
+    "Streaming": 207413,
+    "VoIP": 214181
+  },
+  "articulo": {
+    "Chat": 1325,
+    "Email": 168,
+    "FileTransfer": 266577,
+    "Streaming": 207405,
+    "VoIP": 214180
+  },
+  "videollamadas": "Streaming",
+  "campos_tshark": [
+    "_ws.col.No.",
+    "frame.time_relative",
+    "_ws.col.Source",
+    "_ws.col.Destination",
+    "_ws.col.Protocol",
+    "tcp.srcport",
+    "tcp.dstport",
+    "tcp.len",
+    "udp.srcport",
+    "udp.dstport",
+    "tcp.payload",
+    "udp.payload"
+  ],
+  "version_tshark": "TShark (Wireshark) 4.0.6 (v4.0.6-0-gac2f5a01286a)."
+}

@@ -1,0 +1,3 @@
+# Este archivo existe simplemente para que GIT registre el directorio y se guarde el esqueleto de directorios
+*
+!.gitignore

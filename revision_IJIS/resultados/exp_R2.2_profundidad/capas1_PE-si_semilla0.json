@@ -1,0 +1,194 @@
+{
+  "n": 69116,
+  "accuracy": 0.9353695236992882,
+  "accuracy_IC95": [
+    0.9335121560056282,
+    0.937178496734525
+  ],
+  "balanced_accuracy": 0.8605865411802938,
+  "macro_precision": 0.9349425100693798,
+  "macro_f1": 0.8903722134051872,
+  "weighted_precision": 0.9431609239777505,
+  "weighted_f1": 0.9339735362825553,
+  "weighted_especificidad": 0.9597213867658638,
+  "kappa": 0.9017809786727236,
+  "mcc": 0.90690286389195,
+  "por_clase": {
+    "Chat": {
+      "n": 133,
+      "precision": 0.9484536082474226,
+      "sensibilidad": 0.6917293233082706,
+      "sensibilidad_IC95": [
+        0.6087883143608854,
+        0.7639053694311777
+      ],
+      "especificidad": 0.9999275183740922,
+      "f1": 0.7999999999999999
+    },
+    "Email": {
+      "n": 17,
+      "precision": 0.875,
+      "sensibilidad": 0.8235294117647058,
+      "sensibilidad_IC95": [
+        0.5897007098262422,
+        0.9380898628745101
+      ],
+      "especificidad": 0.9999710560210712,
+      "f1": 0.8484848484848485
+    },
+    "FileTransfer": {
+      "n": 26807,
+      "precision": 0.8629128595873825,
+      "sensibilidad": 0.99701570485321,
+      "sensibilidad_IC95": [
+        0.9962876784371086,
+        0.9976013011613536
+      ],
+      "especificidad": 0.8996431019404855,
+      "f1": 0.9251298026998962
+    },
+    "Streaming": {
+      "n": 20741,
+      "precision": 0.9926297347912765,
+      "sensibilidad": 0.7921990260836025,
+      "sensibilidad_IC95": [
+        0.7866233428314193,
+        0.7976664885259817
+      ],
+      "especificidad": 0.9974780361757106,
+      "f1": 0.8811605083927709
+    },
+    "VoIP": {
+      "n": 21418,
+      "precision": 0.9957163477208176,
+      "sensibilidad": 0.99845923989168,
+      "sensibilidad_IC95": [
+        0.9978370554933327,
+        0.9989026459149721
+      ],
+      "especificidad": 0.9980711979537926,
+      "f1": 0.9970859074484205
+    }
+  },
+  "matriz_confusion": [
+    [
+      92,
+      0,
+      22,
+      17,
+      2
+    ],
+    [
+      0,
+      14,
+      1,
+      2,
+      0
+    ],
+    [
+      0,
+      1,
+      26727,
+      77,
+      2
+    ],
+    [
+      3,
+      1,
+      4218,
+      16431,
+      88
+    ],
+    [
+      2,
+      0,
+      5,
+      26,
+      21385
+    ]
+  ],
+  "config": {
+    "capas": 1,
+    "positional_encoding": "si",
+    "escala_pe": 1.0,
+    "semilla": 0,
+    "epochs": 15,
+    "batch_size": 100,
+    "learning_rate": 0.0003,
+    "num_heads": 8,
+    "head_size": 6,
+    "ff_dim": 256,
+    "mlp_units": 250,
+    "dropout": 0.2,
+    "mlp_dropout": 0.2
+  },
+  "parametros": 149213,
+  "folds": [
+    {
+      "fold": 0,
+      "train_accuracy": 0.9337903261184692,
+      "train_loss": 0.16550138592720032,
+      "val_accuracy": 0.9340717792510986,
+      "val_loss": 0.16487736999988556,
+      "val_macro_f1": 0.871868713705991
+    },
+    {
+      "fold": 1,
+      "train_accuracy": 0.933510959148407,
+      "train_loss": 0.16496683657169342,
+      "val_accuracy": 0.9358963966369629,
+      "val_loss": 0.16209930181503296,
+      "val_macro_f1": 0.8756952753589982
+    },
+    {
+      "fold": 2,
+      "train_accuracy": 0.9344112277030945,
+      "train_loss": 0.16497695446014404,
+      "val_accuracy": 0.9330670237541199,
+      "val_loss": 0.170146182179451,
+      "val_macro_f1": 0.8680104545879178
+    },
+    {
+      "fold": 3,
+      "train_accuracy": 0.9336013793945312,
+      "train_loss": 0.16621939837932587,
+      "val_accuracy": 0.9332438707351685,
+      "val_loss": 0.16693714261054993,
+      "val_macro_f1": 0.8636710318651213
+    },
+    {
+      "fold": 4,
+      "train_accuracy": 0.934698760509491,
+      "train_loss": 0.16415312886238098,
+      "val_accuracy": 0.9319250583648682,
+      "val_loss": 0.1728765368461609,
+      "val_macro_f1": 0.8931287325560018
+    }
+  ],
+  "resumen_folds": {
+    "train_accuracy": {
+      "media": 0.9340025305747985,
+      "desviacion": 0.0004689061596097146
+    },
+    "train_loss": {
+      "media": 0.16516354084014892,
+      "desviacion": 0.0006816764418887335
+    },
+    "val_accuracy": {
+      "media": 0.9336408257484436,
+      "desviacion": 0.001319393851765408
+    },
+    "val_loss": {
+      "media": 0.16738730669021606,
+      "desviacion": 0.003800222812364677
+    },
+    "val_macro_f1": {
+      "media": 0.8744748416148059,
+      "desviacion": 0.010146522686988645
+    }
+  },
+  "mejor_fold": 1,
+  "minutos_entrenamiento": 218.7942719856898,
+  "latencia_ms_por_semiflujo": 0.09524585003964603,
+  "dispositivo": "CPU"
+}

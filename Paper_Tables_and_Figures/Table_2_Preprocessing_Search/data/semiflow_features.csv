@@ -1,0 +1,29 @@
+hashSemiflujo,categorias_a_procesar,min_paquetes_flujo,tiempo_maximo_semiflujo,num_paquetes_semiflujo,longitud_raw,num_hex_token,token_separador,num_semiflujos_por_categoria
+7be2a6d0f3592295547184340b68b4b4,Chat Email FileTransfer Streaming VoIP,20,30.0,20,600,4,num_maximo,Chat:1325  Email:168  FileTransfer:266577  Streaming:207405  VoIP:214180  
+53740794bd75ade2782eca993a5cb6b2,Chat Email FileTransfer Streaming VoIP,20,30.0,10,600,4,num_maximo,Chat:3014  Email:456  FileTransfer:539042  Streaming:415065  VoIP:428415  
+d86bd8c1f06c6599b5d3ce9b434345d8,Chat Email FileTransfer Streaming VoIP,20,30.0,20,800,4,num_maximo,Chat:1325  Email:168  FileTransfer:266577  Streaming:207405  VoIP:214180  
+70b7b57ca6bcbc7250ee58cff6310f67,Audio_5G Chat_fotos_5G Chat_texto_5G FileTransfer_5G Instagram_5G Maps_5G Streaming_5G Videojuego_5G,150,45.0,150,600,4,num_maximo,Audio_5G:180  Chat_fotos_5G:6  Chat_texto_5G:11  FileTransfer_5G:3470  Instagram_5G:84  Maps_5G:89  Streaming_5G:667  Videojuego_5G:15  
+3b387f39d944e8acb46633aecb844663,Chat Email FileTransfer Streaming VoIP,20,15.0,10,200,4,num_maximo,Chat:2792  Email:399  FileTransfer:532477  Streaming:407728  VoIP:422043  
+8480d0f3c1c71ae494562aac64b9677a,Chat Email FileTransfer Streaming VoIP,20,15.0,5,200,4,num_maximo,Chat:6194  Email:958  FileTransfer:1065136  Streaming:835759  VoIP:796026  
+624b31676990acc37ab12f745eb726a2,Audio_5G Chat_fotos_5G Chat_texto_5G Instagram_5G Maps_5G Streaming_5G Videojuego_5G,20,30.0,10,600,4,num_maximo,Audio_5G:1418  Chat_fotos_5G:226  Chat_texto_5G:376  Instagram_5G:871  Maps_5G:966  Streaming_5G:6689  Videojuego_5G:831  
+30396cf35df78285e964e48cacb6d9e3,Chat FileTransfer Streaming VoIP,100,30.0,50,400,4,num_maximo,Chat:346  FileTransfer:106537  Streaming:82598  VoIP:84714  
+79990b1d1c1acbd9c6726c6db9ee528a,Audio_5G Chat_fotos_5G Chat_texto_5G,20,30.0,20,600,4,num_maximo,Audio_5G:705  Chat_fotos_5G:103  Chat_texto_5G:187  
+69030d838c4905d7676c33f72c82aacc,Audio_5G Chat_fotos_5G Chat_texto_5G FileTransfer_5G Instagram_5G Maps_5G Streaming_5G Videojuego_5G,20,30.0,20,600,4,num_maximo,Audio_5G:705  Chat_fotos_5G:103  Chat_texto_5G:187  FileTransfer_5G:26200  Instagram_5G:430  Maps_5G:478  Streaming_5G:3300  Videojuego_5G:391  
+fc5efc6d2f9630c26612247f6222ebee,Audio_5G Chat_fotos_5G Chat_texto_5G Instagram_5G Maps_5G Streaming_5G Videojuego_5G,150,45.0,150,600,4,num_maximo,Audio_5G:180  Chat_fotos_5G:6  Chat_texto_5G:11  Instagram_5G:84  Maps_5G:89  Streaming_5G:667  Videojuego_5G:15  
+09c88984c6a614e6ca3ce1541ac7af7f,Audio_5G Chat_texto_5G,150,45.0,150,600,4,num_maximo,Audio_5G:180  Chat_texto_5G:11  
+0eb242ef9408101770753a5103089377,Chat Email FileTransfer Streaming VoIP,20,30.0,20,200,4,num_maximo,Chat:1325  Email:168  FileTransfer:266576  Streaming:207405  VoIP:214180  
+b0b3441f221723ee7beca825d6718abe,Audio_5G Chat_fotos_5G Chat_texto_5G FileTransfer_5G Instagram_5G Maps_5G Streaming_5G Videojuego_5G,20,30.0,10,600,4,num_maximo,Audio_5G:1418  Chat_fotos_5G:226  Chat_texto_5G:376  FileTransfer_5G:52462  Instagram_5G:871  Maps_5G:966  Streaming_5G:6689  Videojuego_5G:831  
+e0493ea5d207635ad01b42443870f373,Chat Email,20,30.0,10,600,4,num_maximo,Chat:3013  Email:456  
+4c8cb0f21b2c237ff1e0c3adce5ad194,Audio_5G Chat_fotos_5G Chat_texto_5G Instagram_5G Maps_5G Streaming_5G Videojuego_5G,20,30.0,20,600,4,num_maximo,Audio_5G:705  Chat_fotos_5G:103  Chat_texto_5G:187  Instagram_5G:430  Maps_5G:478  Streaming_5G:3300  Videojuego_5G:391  
+797fe51685fac8632b4e64a1aeb2859b,FileTransfer Streaming VoIP,20,15.0,5,200,4,num_maximo,FileTransfer:1065136  Streaming:835759  VoIP:796026  
+93679f3b480ebf0682a1ddfd73f6e19d,Chat Email VoIP,20,30.0,10,600,4,num_maximo,Chat:3014  Email:456  VoIP:428415  
+060eaab55e1e0dd2d41fe88ed69ebb5b,YouTube Spotify Discord,20,30.0,20,800,4,num_maximo,YouTube:18057  Spotify:22688  Discord:25488  
+56e8e5376c848ee8c4a9aef8da11194f,Chat Email Streaming,20,30.0,10,600,4,num_maximo,Chat:3013  Email:456  Streaming:415050  
+72b265eda4a5498f86b9832260cdbf3d,TransferenciaArchivos YouTube Spotify Discord,20,30.0,20,800,4,num_maximo,TransferenciaArchivos:26460  YouTube:18057  Spotify:22688  Discord:25488  
+f70fd466b53a6d7cd6e4c870fd154aee,Chat FileTransfer Streaming VoIP,100,30.0,100,400,4,num_maximo,Chat:91  FileTransfer:53191  Streaming:41188  VoIP:42228  
+8ac1a958f5fdfbfe9d8ec9332ca21441,Chat Email FileTransfer Streaming VoIP,20,30.0,20,800,8,num_maximo,Chat:1325  Email:168  FileTransfer:266577  Streaming:207405  VoIP:214180  
+b2f02cdd09fb0f58e0c2cb9901103e74,Chat FileTransfer Streaming VoIP,150,45.0,150,600,4,num_maximo,Chat:55  FileTransfer:35417  Streaming:27886  VoIP:28141  
+3d3c4b96ba623fda188e9e4807daa97b,Chat Email FileTransfer Streaming VoIP,20,30.0,20,400,4,num_maximo,Chat:1325  Email:168  FileTransfer:266576  Streaming:207405  VoIP:214180  
+0c42c3a8b88ed6213f2c8e6dba350d3c,Chat Email FileTransfer Streaming VoIP,20,30.0,20,200,8,num_maximo,Chat:1325  Email:168  FileTransfer:266576  Streaming:207405  VoIP:214180  
+7f1118db68960d44fa45049f455e716a,Chat Email,20,30.0,10,600,4,num_maximo,Chat:3013  Email:456  
+803bd9e43303ba578a028c751177476f,Chat FileTransfer Streaming VoIP,100,30.0,50,800,4,num_maximo,Chat:346  FileTransfer:106537  Streaming:82598  VoIP:84714  

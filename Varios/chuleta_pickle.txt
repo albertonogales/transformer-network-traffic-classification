@@ -1,0 +1,8 @@
+## Código chuleta para guardar un objeto/variable de python en el PC usando pickle
+## file_dict_semiflujos = open('nombre.obj', 'wb') 
+## pickle.dump(variable_a_guardar, file_dict_semiflujos)
+
+## Código chuleta para cargar un objeto previamente guardado en el PC
+## file_semiflujos_dict = open('nombre.obj', 'rb') 
+## variable_a_cargar = pickle.load(file_semiflujos_dict)
+

@@ -1,0 +1,36 @@
+Modelo: articulo_2023 capas=1 PE=no (mejor fold -1) | preprocesamiento: rt
+360 ventanas de captura en C:\Users\Alberto Nogales\Dropbox\01_UAH\Tesis Activas\Arancha Ciprian\Papers\Enviados\43 Traffic network NLP\Real-Time Experiments\results
+  [5/360] Chat/run0/pcap_5: EmptyDataError: No columns to parse from file
+  [6/360] Chat/run0/pcap_6: EmptyDataError: No columns to parse from file
+  [7/360] Chat/run0/pcap_7: EmptyDataError: No columns to parse from file
+  [8/360] Chat/run0/pcap_8: EmptyDataError: No columns to parse from file
+  [9/360] Chat/run0/pcap_9: EmptyDataError: No columns to parse from file
+  [10/360] Chat/run0/pcap_10: EmptyDataError: No columns to parse from file
+  [25/360] Chat/run3/pcap_5: 50 semi-flujos, dominante Streaming (1 s)
+  [50/360] Chat/run5/pcap_10: 27 semi-flujos, dominante Chat (4 s)
+  [75/360] Chat/run8/pcap_5: 0 semi-flujos, dominante  (5 s)
+  [100/360] Email/run1/pcap_10: 0 semi-flujos, dominante  (5 s)
+  [125/360] Email/run4/pcap_5: 18 semi-flujos, dominante FileTransfer (7 s)
+  [150/360] Email/run6/pcap_10: 7 semi-flujos, dominante FileTransfer (9 s)
+  [175/360] FileTransfer/run3/pcap_5: 677 semi-flujos, dominante FileTransfer (55 s)
+  [200/360] FileTransfer/run8/pcap_10: 52 semi-flujos, dominante FileTransfer (160 s)
+  [225/360] Streaming/run2/pcap_5: 31 semi-flujos, dominante Streaming (162 s)
+  [250/360] Streaming/run7/pcap_10: 0 semi-flujos, dominante  (164 s)
+  [275/360] VoIP/run1/pcap_5: 50 semi-flujos, dominante Streaming (168 s)
+  [300/360] VoIP/run3/pcap_10: 47 semi-flujos, dominante Streaming (171 s)
+  [325/360] VoIP/run6/pcap_5: 33 semi-flujos, dominante VoIP (173 s)
+  [350/360] VoIP/run8/pcap_10: 24 semi-flujos, dominante Streaming (174 s)
+  [360/360] VoIP/run9/pcap_10: 33 semi-flujos, dominante Streaming (175 s)
+
+| Clase | Semi-flujos | Accuracy (semi-flujo) | Ventanas con clase dominante correcta |
+|---|---|---|---|
+| Chat | 1660 | 58.8 % | 42/84 |
+| Email | 760 | 0.0 % | 0/60 |
+| FileTransfer | 57732 | 46.8 % | 32/60 |
+| Streaming | 2331 | 32.7 % | 32/60 |
+| VoIP | 3206 | 31.0 % | 30/90 |
+| **Total** | 65689 | **45.3 %** | 136/354 |
+
+Latencia de inferencia (NumPy, esta máquina): mediana 0.606 ms por semi-flujo
+
+Escrito: C:\Users\Alberto Nogales\Dropbox\01_UAH\Tesis Activas\Arancha Ciprian\Papers\Enviados\43 Traffic network NLP\Network-traffic-classification-CEIEC-master\revision_IJIS\resultados\exp_R2.5_tiempo_real\articulo2023_capas1_preproc-rt_ventanas.csv

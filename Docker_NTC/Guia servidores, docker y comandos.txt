@@ -1,0 +1,117 @@
+## -----------------------------------------------------------------------------------------------------------------------------
+## PLANTILLA CON COMANDOS E INFORMACIÓN ÚTIL PARA LA CREACIÓN Y EJECUCIÓN DE CONTENEDORES DE JUPYTER NOTEBOOKS EN LOS SERVIDORES
+## --------------------------------FECHA DE ACTUALIZACIÓN : MAYO DE 2023--------------------------------------------------------
+## -----------------------------------------------------------------------------------------------------------------------------
+
+Debido a la ausencia de internet en los servidores, se recomienda trabajar en local en los equipos del CEIEC hasta que sea necesario
+entrenar, ya que una vez tenemos creada la imagen, no podemos modificarla, esto significa que si la imagen no contiene una librería 
+necesaria, o su versión es incorrecta, habrá que volver a crear la imagen y exportarla al servidor, siendo este un proceso que consume
+una media hora de tiempo por lo menos.
+Por tanto, el flujo de trabajo que se recomienda sería el siguiente:
+
+	a) Instalar jupyter notebook (si no lo tengo ya) en mi equipo del CEIEC.
+	b) Comenzar con el preprocesamiento y el diseño de mi problema a resolver.
+	c) Codificar correctamente mi cuadernillo y sus scripts necesarios, siguiendo el esquema de directorios que puedes encontrar en
+	   el siguiente repositorio: https://github.com/ufvceiec/Network-traffic-classification-CEIEC
+	d) Una vez tengo todo comprobado y me funciona correctamente, pruebo un entrenamiento "dummy" que pueda ejecutar con la CPU
+	   de mi equipo local del CEIEC.
+	e) Si la prueba ha sido exitosa, ya puedo llevar mi proyecto a los servidores del CEIEC para poder entrenar con las gráficas.
+
+AVISO: Es posible que no solo el entrenamiento de tu proyecto sea el cuello de botella, sino que también el preprocesamiento sea un proceso
+que requiera una gran cantidad de cómputo, en tal caso, deberás realizar también el preprocesamiento en los servidores del CEIEC. 
+
+Muy bien, superado los puntos anteriores, vamos a ver qué pasos tendrías que seguir para desplegar tu proyecto en los servidores.
+
+	1)  Rellenar los ficheros "Dockerfile" y "requirements.txt", con aquellas necesidades de tu proyecto.
+	    Puedes encontrar ejemplos de estos en el repositorio: https://github.com/ufvceiec/Network-traffic-classification-CEIEC
+	    dentro de la carpeta de docker. (¡¡IMPORTANTE: esta carpeta debe tener un nombre distinto para cada proyecto de cada becario,
+	    de lo contrario puede haber conflictos en posteriores pasos!! Se recomienda nombrarla "Docker_SiglasProyecto")
+	    
+	2)  Instalar docker en tu equipo del CEIEC (si no está instalado ya), moverte al directorio donde hayas creado
+	    los archivos del punto 1, y ejecutar el comando "docker build -t nombre_de_tu_imagen ."
+	    Cuando acabe el proceso, si ejecutas "docker image ls", deberías ver la imagen que acabas de crear.
+	    
+	3)  Una vez creada, vamos a exportarla a un fichero ".tar" para poder moverla al servidor, con el comando 
+	    "docker save -o nombre_archivo.tar nombre_de_tu_imagen", verás como se ha creado el fichero ".tar"
+	    
+	4)  Ahora toca mover el fichero ".tar" al servidor correspondiente donde vayas a entrenar, usando Filezilla.
+	    También deberás mover con Filezilla el resto de componentes necesarios de tu proyecto, principalmente código
+	    y datos, al servidor o al NAS (consulta a los investigadores principales).
+	    
+	5)  Una vez hayamos movido la imagen, nos conectamos por SSH al servidor "ssh -p 1111 becceiecx@192.168.80.174", (el puerto
+	    indica a qué servidor te conectas) y cargamos la imagen, usando el comando:
+	    "docker load -i nombre_archivo.tar", posteriormente si ejecutamos "docker image ls" deberíamos ver la imagen.
+	    
+	6)  Una vez tenemos la imagen, debemos modificar el fichero "docker-compose.yml", modificando todos los parámetros
+	    necesarios. (Aquellos necesarios a modificar están comentados en el ejemplo del repositorio del punto 1)
+	    
+	7)  Una vez tenemos el docker-compose preparado, levantaremos nuestro contenedor con el comando "docker-compose up -d" (*)
+	    Si ejecutamos "docker ps", deberíamos ver nuestro contenedor.
+	    (*)(docker-compose está comenzando a volverse obsoleto, y docker está implementando de base su propia versión compose, por lo que en algunos servidores el comando correcto es "docker compose up -d", sin guión entre 'docker' y 'compose'.)
+	    
+	8)  Vamos a conectarnos al contenedor, para ello ejecutamos "docker exec -it nombre_contenedor /bin/bash"
+	
+	9)  Estamos dentro del contenedor, lo primero será explorar su contenido con el comando "ls", para ver que los volúmenes
+	    que hemos establecido en el docker-compose se hayan cargado correctamente, y que podemos ver nuestro código y/o datos.
+	    
+	10) Si todo es correcto, vamos a ejecutar el jupyter notebook (comando especial para ejecutar el notebook en remoto): 
+	    "jupyter notebook --ip 0.0.0.0 --no-browser --port 8090 --allow-root"
+	    Atención al puerto, este debe coincidir con lo establecido en el docker-compose, para que se ejecute en el puerto 
+	    que habíamos mapeado entre el contenedor y el host.
+	    Pongamos el siguiente ejemplo de puertos de docker-compose:
+	    ports:
+            	- 9999:8090      ## Mapeo de puertos --> host:contenedor 
+    	    El puerto 8090 del contenedor, se mapea al 9999 del host, es decir, del servidor.
+    	    Por tanto hemos ejecutado correctamente el comando del jupyter notebook, indicándole que se ejecute en el puerto 8090
+    	    del contenedor, y actualmente nuestro notebook se encuentra en el puerto 9999 del servidor.
+	    
+	11) Ahora debemos establecer un redireccionamiento del puerto 9999 del servidor, a nuestro equipo local del CEIEC, para 
+	    poder visualizar el jupyter notebook.
+	    "ssh -L 8050:192.168.1.100:9999 becceiec3@192.168.80.174"
+	    En el comando superior, que ejecuto desde una nueva terminal de mi equipo local, me conecto al front (192.168.80.174)
+	    para posteriormente indicar que me mapee el puerto 9999 del servidor Hinton (192.168.1.100), al puerto 8050 de mi
+	    equipo local. Si todo es correcto, si abro un navegador con la dirección "localhost:8050", estaré viendo el 
+	    jupyter notebook que se está ejecutando en Hinton.
+	    
+	    ¡¡AVISOS!!
+	    El puerto del servidor, en el ejemplo el 9999, debe coincidir con el establecido en el docker-compose y no debe 
+	    ser igual que el que esté usando otra persona en ese mismo servidor.
+	    (Se recomienda establecer unos puertos de uso exclusivo para cada becario para evitar estos fallos)
+	    
+	    Debes cambiar la IP con la del servidor al que te quieras conectar:
+	    	- Hinton: 192.168.1.100
+	    	- Lecun: 192.168.1.102
+	    	- Bengio: 192.168.1.104
+	    	
+    	    Debes conectarte usando tu usuario: becceiecx
+	
+	12) El jupyter notebook te pedirá la primera vez que te conectes, que verifiques tu identidad introduciendo un token 
+	    de autentificación, el cual puedes ver en la terminal en la que estás ejecutando el notebook. 
+	    Suele tener esta pinta:
+	    "http://docker_carlos:8090/?token=e1c0a43167e2f108e5449c43442d16199ff288f9334bbc12"
+	    Copia el token e introdúcelo para tener acceso. En el ejemplo: "e1c0a43167e2f108e5449c43442d16199ff288f9334bbc12"
+	    
+	13) Una vez terminemos el trabajo, paramos el notebook (Control + c), saldremos del contenedor ("exit") y lo pausaremos
+	    "docker stop nombre_contenedor".
+	    En futuras ocasiones simplemente tendremos que :
+	    	- conectarnos al servidor "ssh -p 1111 becceiecx@192.168.80.174"
+	    	- levantar el contenedor "docker start nombre_contenedor"
+	    	- conectarnos a él "docker exec -it nombre_contenedor /bin/bash"
+	    	- levantar el notebook "jupyter notebook --ip 0.0.0.0 --no-browser --port 8090 --allow-root"
+	    	- Establecer el mapeo con SSH en nuestro equipo: "ssh -L 8050:192.168.1.100:9999 becceiec3@192.168.80.174" 
+	    	Cinco sencillos comandos que son inmediatos.
+	 
+
+Para que te hagas un esquema mental final de lo que ocurre, sería lo siguiente:
+
+ESQUEMA DE REDIRECCIONAMIENTO: 	Contenedor_jupyter_notebook(8090) -> Hinton(9999) -> PC_CEIEC(8050)  
+
+Como ves, hay 2 redireccionamientos, del contenedor docker al servidor (en este caso Hinton), y del servidor a tu PC local.
+
+Con el jupyter notebook ya funcionando en tu PC local, puedes usarlo tanto para ejecución, como para modificación de código,
+eso sí, no olvides recuperar periódicamente los cambios de código que ejecutes en el servidor y subirlos a GitHub!
+Para ello tendrás que llevar de vuelta a tu PC local los archivos modificados, y hacer un push al repo de GitHub.
+(Mi recomendación personal es salvar el trabajo en GitHub mínimo una vez por semana, lo idóneo es a diario :3)
+
+
+

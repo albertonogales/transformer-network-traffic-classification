@@ -1,0 +1,54 @@
+
+######## xgboost ########
+  {'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1}  val_acc=99.36±0.02  val_macroF1=96.50
+  {'n_estimators': 200, 'max_depth': 10, 'learning_rate': 0.1}  val_acc=99.38±0.02  val_macroF1=96.65
+  {'n_estimators': 500, 'max_depth': 6, 'learning_rate': 0.1}  val_acc=99.39±0.02  val_macroF1=96.87
+  {'n_estimators': 500, 'max_depth': 10, 'learning_rate': 0.1}  val_acc=99.39±0.02  val_macroF1=96.79
+== xgboost ==
+accuracy=99.39%  macro-F1=97.34%  balanced-acc=96.64%  kappa=0.991  MCC=0.991
+  Chat          n=   133  P= 92.37  R= 90.98 [84.9-94.8]  F1= 91.67  Esp= 99.99
+  Email         n=    17  P=100.00  R= 94.12 [73.0-99.0]  F1= 96.97  Esp=100.00
+  FileTransfer  n= 26807  P= 99.97  R= 99.91 [99.9-99.9]  F1= 99.94  Esp= 99.98
+  Streaming     n= 20741  P= 99.46  R= 98.58 [98.4-98.7]  F1= 99.01  Esp= 99.77
+  VoIP          n= 21418  P= 98.66  R= 99.59 [99.5-99.7]  F1= 99.12  Esp= 99.39
+
+######## xgboost_balanced ########
+  {'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1}  val_acc=99.35±0.01  val_macroF1=96.89
+  {'n_estimators': 200, 'max_depth': 10, 'learning_rate': 0.1}  val_acc=99.39±0.02  val_macroF1=97.20
+  {'n_estimators': 500, 'max_depth': 6, 'learning_rate': 0.1}  val_acc=99.40±0.01  val_macroF1=97.40
+  {'n_estimators': 500, 'max_depth': 10, 'learning_rate': 0.1}  val_acc=99.40±0.01  val_macroF1=97.25
+== xgboost_balanced ==
+accuracy=99.41%  macro-F1=97.33%  balanced-acc=97.24%  kappa=0.991  MCC=0.991
+  Chat          n=   133  P= 89.29  R= 93.98 [88.6-96.9]  F1= 91.58  Esp= 99.98
+  Email         n=    17  P=100.00  R= 94.12 [73.0-99.0]  F1= 96.97  Esp=100.00
+  FileTransfer  n= 26807  P= 99.98  R= 99.92 [99.9-99.9]  F1= 99.95  Esp= 99.99
+  Streaming     n= 20741  P= 99.51  R= 98.55 [98.4-98.7]  F1= 99.03  Esp= 99.79
+  VoIP          n= 21418  P= 98.66  R= 99.63 [99.5-99.7]  F1= 99.14  Esp= 99.39
+
+######## random_forest ########
+  {'n_estimators': 300, 'max_depth': None, 'min_samples_leaf': 1}  val_acc=99.35±0.01  val_macroF1=97.20
+  {'n_estimators': 300, 'max_depth': None, 'min_samples_leaf': 5}  val_acc=99.32±0.02  val_macroF1=96.44
+  {'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 1}  val_acc=99.34±0.02  val_macroF1=97.18
+  {'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 5}  val_acc=99.32±0.02  val_macroF1=96.35
+== random_forest ==
+accuracy=99.36%  macro-F1=97.40%  balanced-acc=96.76%  kappa=0.990  MCC=0.990
+  Chat          n=   133  P= 92.42  R= 91.73 [85.8-95.3]  F1= 92.08  Esp= 99.99
+  Email         n=    17  P=100.00  R= 94.12 [73.0-99.0]  F1= 96.97  Esp=100.00
+  FileTransfer  n= 26807  P= 99.97  R= 99.90 [99.9-99.9]  F1= 99.93  Esp= 99.98
+  Streaming     n= 20741  P= 99.55  R= 98.35 [98.2-98.5]  F1= 98.94  Esp= 99.81
+  VoIP          n= 21418  P= 98.47  R= 99.72 [99.6-99.8]  F1= 99.09  Esp= 99.30
+
+######## random_forest_balanced ########
+  {'n_estimators': 300, 'max_depth': None, 'min_samples_leaf': 1}  val_acc=99.33±0.02  val_macroF1=96.48
+  {'n_estimators': 300, 'max_depth': None, 'min_samples_leaf': 5}  val_acc=99.28±0.02  val_macroF1=95.08
+  {'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 1}  val_acc=99.30±0.02  val_macroF1=95.01
+  {'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 5}  val_acc=99.27±0.02  val_macroF1=94.78
+== random_forest_balanced ==
+accuracy=99.35%  macro-F1=96.10%  balanced-acc=96.91%  kappa=0.990  MCC=0.990
+  Chat          n=   133  P= 89.78  R= 92.48 [86.7-95.9]  F1= 91.11  Esp= 99.98
+  Email         n=    17  P= 88.89  R= 94.12 [73.0-99.0]  F1= 91.43  Esp=100.00
+  FileTransfer  n= 26807  P= 99.97  R= 99.88 [99.8-99.9]  F1= 99.93  Esp= 99.98
+  Streaming     n= 20741  P= 99.59  R= 98.30 [98.1-98.5]  F1= 98.94  Esp= 99.83
+  VoIP          n= 21418  P= 98.43  R= 99.75 [99.7-99.8]  F1= 99.09  Esp= 99.29
+
+Tabla comparativa: C:\Users\Alberto Nogales\Dropbox\01_UAH\Tesis Activas\Arancha Ciprian\Papers\Enviados\43 Traffic network NLP\Network-traffic-classification-CEIEC-master\revision_IJIS\resultados\exp_R2.4_ml_clasico\tabla_R2.4.csv

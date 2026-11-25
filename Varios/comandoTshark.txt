@@ -1,0 +1,4 @@
+Comando de TShark que dado un archivo "prueba.pcap" dado genera un archivo csv resultante con los campos y opciones que se le indica.
+Es el comando usado en el jupyter notebook y es el resultado de investigar la documentación y foros de Wireshark para poder generar un archivo CSV a partir de un PCAP. 
+
+"tshark -r prueba.pcap -E separator=, -Tfields -e _ws.col.No. -e _ws.col.Time -e _ws.col.Source -e _ws.col.Destination -e _ws.col.Protocol -e _ws.col.Length -e tcp.srcport -e tcp.dstport -e tcp.len -e udp.srcport -e udp.dstport -e tcp.payload -e data.data > output.csv"

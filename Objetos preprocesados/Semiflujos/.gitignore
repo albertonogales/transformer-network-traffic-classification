@@ -1,0 +1,4 @@
+# Este archivo existe simplemente para que GIT registre el directorio y se guarde el esqueleto de directorios que tiene 'Objetos_preprocesados'
+*
+!caracteristicas_semiflujos.csv
+!.gitignore
